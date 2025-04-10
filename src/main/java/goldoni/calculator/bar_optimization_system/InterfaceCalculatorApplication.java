@@ -1,6 +1,6 @@
-package goldoni.calculadora.calculadora_de_sobras;
+package goldoni.calculator.bar_optimization_system;
 
-import goldoni.calculadora.calculadora_de_sobras.interfaces.HomeScreen;
+import goldoni.calculator.bar_optimization_system.interfaces.HomeScreen;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

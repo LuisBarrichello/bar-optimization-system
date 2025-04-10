@@ -1,4 +1,4 @@
-package goldoni.calculadora.calculadora_de_sobras;
+package goldoni.calculator.bar_optimization_system;
 
 public class Element {
     private int position;

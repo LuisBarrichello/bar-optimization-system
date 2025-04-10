@@ -1,4 +1,4 @@
-package goldoni.calculadora.calculadora_de_sobras;
+package goldoni.calculator.bar_optimization_system;
 
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;

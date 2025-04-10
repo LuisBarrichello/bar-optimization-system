@@ -1,10 +1,12 @@
-package goldoni.calculadora.calculadora_de_sobras.interfaces;
+package goldoni.calculator.bar_optimization_system.interfaces;
 
-import goldoni.calculadora.calculadora_de_sobras.ExcelExporter;
-import goldoni.calculadora.calculadora_de_sobras.OptimizationResult;
+import goldoni.calculator.bar_optimization_system.ExcelExporter;
+import goldoni.calculator.bar_optimization_system.OptimizationResult;
+import goldoni.calculator.bar_optimization_system.PdfExporter;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
@@ -17,6 +19,7 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.io.IOException;
 import java.util.Map;
 
 public class ResultScreen {
@@ -24,7 +27,6 @@ public class ResultScreen {
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(20));
 
-        // Container principal para os resultados
         VBox contentBox = new VBox(20);
         contentBox.setPadding(new Insets(20));
 
@@ -62,6 +64,12 @@ public class ResultScreen {
 
         btnExportPDF.setOnAction(event -> {
             System.out.println("Exporting to PDF...");
+            try {
+                PdfExporter.exportToPDFWithChooser(primaryStage, result);
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.err.println("Error exporting to PDF: " + e.getMessage());
+            }
         });
 
         btnExportExcel.setOnAction(event -> {
@@ -78,7 +86,11 @@ public class ResultScreen {
 
             //defined the content in clipboard
             clipboard.setContents(stringSelection, null);
-            System.out.println("Texto copiado para a área de transferência!");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Texto copiado!");
+            alert.setHeaderText("Texto copiado!");
+            alert.setContentText("Texto copiado para a área de transferência!");
+            alert.showAndWait();
         });
 
         btnHome.setOnAction(event -> {
@@ -88,7 +100,6 @@ public class ResultScreen {
         HBox buttonsBox = new HBox(10, btnExportPDF, btnExportExcel, btnCopyText, btnHome);
         buttonsBox.setAlignment(Pos.CENTER);
 
-        // Organizing elements in the VBox
         contentBox.getChildren().addAll(
                 headerText,
                 scrollPane,
@@ -97,10 +108,11 @@ public class ResultScreen {
 
         root.setCenter(contentBox);
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root);
         primaryStage.setTitle("Resultados da Calculadora");
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setMaximized(true);
     }
 
     private static Button createButton(String text) {
