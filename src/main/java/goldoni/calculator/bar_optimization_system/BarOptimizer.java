@@ -1,4 +1,4 @@
-package goldoni.calculadora.calculadora_de_sobras;
+package goldoni.calculator.bar_optimization_system;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,7 +53,7 @@ public class BarOptimizer {
                 }
             }
 
-            // Se encontramos uma barra com encaixe, adiciona o corte nela
+            // If we find a bar with a socket, add the cut to it
             if(bestIndex != -1) {
                 bars.get(bestIndex).add(cut);
             } else {
@@ -63,7 +63,7 @@ public class BarOptimizer {
             }
         }
 
-        // Calcula as sobras de cada barra que tenham ao menos o comprimento mínimo
+        // Calculate the leftovers of each bar that have at least the minimum length
         List<Integer> scraps = new ArrayList<>();
         for (List<Integer> bar : bars) {
             int usedLength = bar.stream().mapToInt(Integer::intValue).sum();
@@ -125,7 +125,6 @@ public class BarOptimizer {
                         bar.getValue(),
                         bar.getKey()
                 ));
-                //output.append(bar.getValue()).append(" barras para os cortes: ").append(bar.getKey()).append("\n");
             }
             output.append("\n");
         }

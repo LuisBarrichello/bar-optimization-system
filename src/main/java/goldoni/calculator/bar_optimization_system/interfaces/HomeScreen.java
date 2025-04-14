@@ -1,8 +1,8 @@
-package goldoni.calculadora.calculadora_de_sobras.interfaces;
+package goldoni.calculator.bar_optimization_system.interfaces;
 
-import goldoni.calculadora.calculadora_de_sobras.BarOptimizer;
-import goldoni.calculadora.calculadora_de_sobras.FilePDF;
-import goldoni.calculadora.calculadora_de_sobras.OptimizationResult;
+import goldoni.calculator.bar_optimization_system.BarOptimizer;
+import goldoni.calculator.bar_optimization_system.FilePDF;
+import goldoni.calculator.bar_optimization_system.OptimizationResult;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -61,10 +61,10 @@ public class HomeScreen {
         root.setTop(topBox);
         root.setCenter(bottomBox);
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root);
         primaryStage.setTitle("Calculadora de Aproveitamento");
         primaryStage.setScene(scene);
-        primaryStage.setMaximized(true);
         primaryStage.show();
+        primaryStage.setMaximized(true);
     }
 }

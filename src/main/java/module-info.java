@@ -8,6 +8,6 @@ module goldoni.calculadora.calculadora_de_sobras {
     requires java.datatransfer;
     requires java.desktop;
 
-    opens goldoni.calculadora.calculadora_de_sobras to javafx.fxml;
-    exports goldoni.calculadora.calculadora_de_sobras;
+    opens goldoni.calculator.bar_optimization_system to javafx.fxml;
+    exports goldoni.calculator.bar_optimization_system;
 }

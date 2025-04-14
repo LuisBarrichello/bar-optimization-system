@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>goldoni.calculadora</groupId>
-  <artifactId>calculadora_de_sobras</artifactId>
+  <artifactId>bar-optimization-system</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>calculadora_de_sobras</name>
 
