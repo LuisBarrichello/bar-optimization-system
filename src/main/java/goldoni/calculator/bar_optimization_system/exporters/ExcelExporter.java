@@ -1,5 +1,6 @@
-package goldoni.calculator.bar_optimization_system;
+package goldoni.calculator.bar_optimization_system.exporters;
 
+import goldoni.calculator.bar_optimization_system.optimizers.OptimizationResult;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.poi.ss.usermodel.*;
@@ -28,11 +29,9 @@ public class ExcelExporter {
                 try (FileOutputStream fileOut = new FileOutputStream(file)) {
                     workbook.write(fileOut);
                 }
-                System.out.println("Exportação para Excel concluída!");
 
             } catch (IOException e) {
                 e.printStackTrace();
-                System.out.println("Erro ao exportar para Excel.");
             }
         }
     }

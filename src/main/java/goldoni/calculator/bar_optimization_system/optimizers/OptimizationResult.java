@@ -1,4 +1,4 @@
-package goldoni.calculator.bar_optimization_system;
+package goldoni.calculator.bar_optimization_system.optimizers;
 
 import java.util.List;
 

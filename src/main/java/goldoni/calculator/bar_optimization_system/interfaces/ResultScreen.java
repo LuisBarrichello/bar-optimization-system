@@ -1,8 +1,8 @@
 package goldoni.calculator.bar_optimization_system.interfaces;
 
-import goldoni.calculator.bar_optimization_system.ExcelExporter;
-import goldoni.calculator.bar_optimization_system.OptimizationResult;
-import goldoni.calculator.bar_optimization_system.PdfExporter;
+import goldoni.calculator.bar_optimization_system.exporters.ExcelExporter;
+import goldoni.calculator.bar_optimization_system.optimizers.OptimizationResult;
+import goldoni.calculator.bar_optimization_system.exporters.PdfExporter;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -30,7 +30,7 @@ public class ResultScreen {
         VBox contentBox = new VBox(20);
         contentBox.setPadding(new Insets(20));
 
-        Text headerText = new Text("Calculation completed successfully!");
+        Text headerText = new Text("Cálculo concluído com êxito!");
         headerText.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 18));
 
         ScrollPane scrollPane = new ScrollPane();
@@ -111,6 +111,8 @@ public class ResultScreen {
         Scene scene = new Scene(root);
         primaryStage.setTitle("Resultados da Calculadora");
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(1280);
+        primaryStage.setMinHeight(720);
         primaryStage.show();
         primaryStage.setMaximized(true);
     }

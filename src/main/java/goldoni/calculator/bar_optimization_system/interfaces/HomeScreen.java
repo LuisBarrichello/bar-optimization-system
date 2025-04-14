@@ -1,12 +1,13 @@
 package goldoni.calculator.bar_optimization_system.interfaces;
 
-import goldoni.calculator.bar_optimization_system.BarOptimizer;
-import goldoni.calculator.bar_optimization_system.FilePDF;
-import goldoni.calculator.bar_optimization_system.OptimizationResult;
+import goldoni.calculator.bar_optimization_system.optimizers.BarOptimizer;
+import goldoni.calculator.bar_optimization_system.inputFile.FilePDF;
+import goldoni.calculator.bar_optimization_system.optimizers.OptimizationResult;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
@@ -19,6 +20,8 @@ import java.util.Map;
 
 public class HomeScreen {
     public static void homeScreen(Stage primaryStage) {
+        Image image = new Image(HomeScreen.class.getResource("/images/icon.png").toExternalForm());
+        primaryStage.getIcons().add(image);
 
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(40));
