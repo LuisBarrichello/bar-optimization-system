@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: goldoni.calculator.bar_optimization_system.InterfaceCalculat
+ orApplication
+
