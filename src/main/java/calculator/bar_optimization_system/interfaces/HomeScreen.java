@@ -1,8 +1,8 @@
-package goldoni.calculator.bar_optimization_system.interfaces;
+package calculator.bar_optimization_system.interfaces;
 
-import goldoni.calculator.bar_optimization_system.optimizers.BarOptimizer;
-import goldoni.calculator.bar_optimization_system.inputFile.FilePDF;
-import goldoni.calculator.bar_optimization_system.optimizers.OptimizationResult;
+import calculator.bar_optimization_system.inputFile.FilePDF;
+import calculator.bar_optimization_system.optimizers.BarOptimizer;
+import calculator.bar_optimization_system.optimizers.OptimizationResult;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

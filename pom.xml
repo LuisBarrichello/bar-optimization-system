@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>goldoni.calculadora</groupId>
+  <groupId>calculator</groupId>
   <artifactId>bar-optimization-system</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>calculadora_de_sobras</name>
@@ -12,6 +12,14 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 <junit.version>5.10.0</junit.version>  </properties>
+
+  <licenses>
+    <license>
+      <name>Apache License 2.0 License</name>
+      <url>https://opensource.org/license/apache-2-0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
 
   <dependencies>
     <dependency>
@@ -71,7 +79,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>goldoni.calculadora.calculadora_de_sobras/goldoni.calculadora.calculadora_de_sobras.HelloApplication</mainClass>
+              <mainClass>calculator.bar_optimization_system.InterfaceCalculatorApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

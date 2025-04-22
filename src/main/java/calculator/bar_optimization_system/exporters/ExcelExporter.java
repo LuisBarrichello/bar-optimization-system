@@ -1,6 +1,6 @@
-package goldoni.calculator.bar_optimization_system.exporters;
+package calculator.bar_optimization_system.exporters;
 
-import goldoni.calculator.bar_optimization_system.optimizers.OptimizationResult;
+import calculator.bar_optimization_system.optimizers.OptimizationResult;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.poi.ss.usermodel.*;

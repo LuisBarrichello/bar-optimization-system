@@ -1,4 +1,4 @@
-package goldoni.calculator.bar_optimization_system.exporters;
+package calculator.bar_optimization_system.exporters;
 
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;

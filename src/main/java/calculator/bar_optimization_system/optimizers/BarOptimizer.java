@@ -1,6 +1,6 @@
-package goldoni.calculator.bar_optimization_system.optimizers;
+package calculator.bar_optimization_system.optimizers;
 
-import goldoni.calculator.bar_optimization_system.model.Element;
+import calculator.bar_optimization_system.model.Element;
 
 import java.util.ArrayList;
 import java.util.HashMap;

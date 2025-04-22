@@ -1,8 +1,8 @@
-package goldoni.calculator.bar_optimization_system;
+package calculator.bar_optimization_system;
 
-import goldoni.calculator.bar_optimization_system.model.Element;
-import goldoni.calculator.bar_optimization_system.optimizers.BarOptimizer;
-import goldoni.calculator.bar_optimization_system.optimizers.OptimizationResult;
+import calculator.bar_optimization_system.model.Element;
+import calculator.bar_optimization_system.optimizers.BarOptimizer;
+import calculator.bar_optimization_system.optimizers.OptimizationResult;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

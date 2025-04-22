@@ -1,6 +1,6 @@
-package goldoni.calculator.bar_optimization_system;
+package calculator.bar_optimization_system;
 
-import goldoni.calculator.bar_optimization_system.interfaces.HomeScreen;
+import calculator.bar_optimization_system.interfaces.HomeScreen;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

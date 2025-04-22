@@ -8,7 +8,7 @@ REM Nome do JAR
 set JAR_NAME=bar-optimization-system.jar
 
 REM Nome da classe principal
-set MAIN_CLASS=goldoni.calculator.bar_optimization_system.InterfaceCalculatorApplication
+set MAIN_CLASS=calculator.bar_optimization_system.InterfaceCalculatorApplication
 
 REM Ícone (caminho relativo ou absoluto)
 set ICON=%INPUT_DIR%\resources\icon.ico
