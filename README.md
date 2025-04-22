@@ -106,14 +106,17 @@ src/main/java/
 
 ## Screenshot
 
+#### Intefaces
 ![Main Screen](assets/screenshots/main_screen.PNG)
 ![Result Screen](assets/screenshots/result_screen.PNG)
+
+##### Input
 ![Exemple Input PDF](assets/screenshots/input_example.PNG)
 
 ## Sample Files
 
 - [Download example cut‑list PDF](assets/samples/sobras_e_aproveitamento.pdf)
-- [Download example report Excel](assets/samples/Sobras e aproveitamentos.xlsx)
+- [Download example report Excel](assets/samples/sobras_e_aproveitamento.xlsx)
 
 ## Contributing
 
