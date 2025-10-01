@@ -1,5 +1,6 @@
 package calculator.bar_optimization_system.interfaces;
 
+import calculator.bar_optimization_system.controller.MainController;
 import calculator.bar_optimization_system.inputFile.FilePDF;
 import calculator.bar_optimization_system.optimizers.BarOptimizer;
 import calculator.bar_optimization_system.optimizers.OptimizationResult;
@@ -19,7 +20,7 @@ import javafx.stage.Stage;
 import java.util.Map;
 
 public class HomeScreen {
-    public static void homeScreen(Stage primaryStage) {
+    public static void homeScreen(Stage primaryStage, MainController mainController) {
         Image image = new Image(HomeScreen.class.getResource("/images/icon.png").toExternalForm());
         primaryStage.getIcons().add(image);
 
@@ -41,16 +42,7 @@ public class HomeScreen {
                 """);
 
         buttonSendRomaneio.setOnAction (e -> {
-            Map<Integer, OptimizationResult> optimizationResultMap = FilePDF.openPdfFile(primaryStage);
-            if (optimizationResultMap.isEmpty()) {
-                return;
-            }
-            String result = BarOptimizer.formatOptimizationResults(optimizationResultMap);
-            if (result != null) {
-                ResultScreen.showResultsScreen(primaryStage, result, optimizationResultMap);
-            } else {
-                System.out.println("Erro ao processar o arquivo PDF");
-            }
+            mainController.processFile();
         });
 
         HBox topBox = new HBox(title);

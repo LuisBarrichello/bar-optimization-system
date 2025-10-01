@@ -1,5 +1,6 @@
 package calculator.bar_optimization_system.interfaces;
 
+import calculator.bar_optimization_system.controller.MainController;
 import calculator.bar_optimization_system.exporters.ExcelExporter;
 import calculator.bar_optimization_system.optimizers.OptimizationResult;
 import calculator.bar_optimization_system.exporters.PdfExporter;
@@ -24,6 +25,8 @@ import java.util.Map;
 
 public class ResultScreen {
     public static void showResultsScreen(Stage primaryStage,  String result, Map<Integer, OptimizationResult> optimizationResultMap) {
+        MainController controller = new MainController(primaryStage);
+
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(20));
 
@@ -94,7 +97,7 @@ public class ResultScreen {
         });
 
         btnHome.setOnAction(event -> {
-            HomeScreen.homeScreen(primaryStage);
+            HomeScreen.homeScreen(primaryStage, controller);
         });
 
         HBox buttonsBox = new HBox(10, btnExportPDF, btnExportExcel, btnCopyText, btnHome);
